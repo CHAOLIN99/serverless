@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+  background-color: #fff; /* White background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.display {
+  background-color: #000;
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%; /* Full width */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.button-container {
+  width: 100%; /* Full width */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for the buttons */
+  gap: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #add8e6; /* Light blue background */
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:active {
+  background-color: #87CEEB; /* Slightly darker blue on active */
+}
+
+/* Specific styles for zero to cover two grid columns */
+button.zero {
+  grid-column: span 2; /* Zero button takes up two columns */
+}
+
+/* Specific styles for operator buttons to differentiate them */
+button.operator {
+  background-color: #00bfff; /* Deep sky blue background for operators */
+}
+
+/* Specific styles for the equal button */
+button.equal {
+  background-color: #00bfff; /* Deep sky blue background for the equal button */
+}
+
+/* Adjust the grid layout to be more compact and even */
+.number-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for numbers */
+  grid-template-rows: repeat(4, 1fr); /* 4 rows for numbers */
+  gap: 10px;
+}
+
+.operations {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr); /* 4 rows for operators */
+  gap: 10px;
+}
+
+/* Adjust the font size and padding for smaller screens */
+@media (max-width: 768px) {
+  .display, .button-container, button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  button.zero {
+    padding-left: 30px; /* Adjust padding for zero button */
+  }
+}
